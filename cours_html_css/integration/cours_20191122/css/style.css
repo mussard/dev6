@@ -4,3 +4,6 @@ h2 {
 h2 {
   color:red;
 }
+header,footer {
+  background-color:lightgray;
+}
