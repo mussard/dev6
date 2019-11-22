@@ -1,21 +1,171 @@
 <!doctype html>
-<html>
+<html lang="fr">
   <head>
-    <!-- commentaires -->
     <meta charset="utf-8">
-    <title>HTML5 : les bases</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen"/>
+    <title>HTML5 : les bases</title>  <!-- SEO (référencement) -->
   </head>
 
-  <!-- commentaires -->
+
+
   <body>
-    <h1>HTML5 : les bases</h1>
-    <h2>Search Engine Opt</h2>
-    <p>
-    blah
-    </p>
-    <a href="http://www.google.fr" target="_blank">Google</a>
+    <!--
+	 Balises sémantiques : pas de contenu; uniquement structurant
+	   (body,header,main,footer et section,article,aside,)
+	   d'ailleurs: bonne pratique est, dans une balise sémantique,
+	   d'encapsuler du contenu dans une balise générique, même si apparement inutile
+	   (cf dans footer)
+	   ("section": peut dire à la machine que ce bloc de contenu
+	               peut être indexé en tant que fragment qui a de la valeur en soi)
+         Balises génériques : contenu avec des propriétés
+	   (gras,italique,lien,titre h1, h2, etc)
+    -->
+
+    <!--
+	inline V. block : balises block (h1,p,etc) forment un objet
+	qui occupe horizontalement toute la page V balises inline (a,etc)
+	qui s'insèrent au sein d'un texte.
+    -->
+
+    <!-- header: autant que voulu -->
+    <header id="header">
+      <!-- h1: un seul par page -->
+      <h1>HTML5 : les bases</h1>
+
+      <p>
+        normal
+        <b>gras</b>           <!-- ok, mais:                          -->
+        <strong>gras</strong> <!-- ajoute une dimension référencement -->
+        <i>italic</i>         <!-- plutôt réservé pour fontawesome    -->
+        <em>italic</em>       <!-- ajoute une dimension referencement -->
+        <a href="http://www.test.com" target="_blank">lien</a>
+      </p>
+
+      <nav>
+        nav: 
+	<a href="#header">header</a>
+	<a href="#semantique">sémantiques</a>
+	<a href="#generique">génériques</a>
+	<a href="#footer">footer</a>
+      </nav>
+    </header>
+
+    <!-- main: un seul par page -->
+    <main>
+      <h2 id="semantique">Balises sémantiques</h2>
+      <aside>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor augue et velit tempus hendrerit. Cras non urna tincidunt, tincidunt nibh eu, mattis orci. Aenean sed ultricies urna. Morbi non sollicitudin arcu, in facilisis libero. Ut sit amet rutrum sapien. Phasellus tincidunt lectus tellus, sed fringilla odio bibendum ac. Donec porta odio eu augue efficitur, id efficitur nibh varius. Pellentesque ex risus, varius eget vehicula a, rutrum non ipsum. Nullam iaculis ante ac felis fringilla, nec efficitur massa convallis. Fusce ac turpis a nisl facilisis varius. Sed pretium ante at varius lacinia. Sed nulla dolor, pellentesque non consectetur a, scelerisque in augue. Etiam semper lacinia tellus, eget venenatis turpis accumsan nec. Maecenas iaculis id velit sed ullamcorper.
+        </p>
+        <p>
+          Curabitur quis erat quis sapien finibus accumsan sit amet ut turpis. Cras vulputate sapien sit amet mattis pharetra. Nulla gravida pulvinar semper. Nulla erat magna, vehicula ac diam sit amet, mattis elementum ex. Mauris eu laoreet nunc. Maecenas tempor volutpat lorem et congue. Duis ultrices efficitur justo, eget volutpat est.
+        </p>
+        <p>
+          Sed interdum est porta justo euismod ultricies. Praesent at nulla accumsan, mollis mauris sed, eleifend mauris. Nulla id quam commodo, egestas dui non, maximus augue. Nulla ultricies consequat scelerisque. Vivamus semper sed erat et congue. Maecenas tempus enim vel venenatis blandit. Morbi at consectetur tellus. Integer posuere auctor sem, non lacinia turpis ullamcorper sit amet. Fusce faucibus felis vel ante rhoncus, at ornare mauris consectetur. Fusce dignissim lorem ac mauris rutrum viverra.
+        </p>
+        <p>
+          Nullam aliquam nisi a auctor lacinia. Etiam auctor, elit a bibendum feugiat, ante eros tincidunt ligula, quis rhoncus quam metus non purus. Nunc lacinia ut nisi nec porttitor. Quisque a neque ut dui auctor vehicula. Integer interdum nisl quis eros cursus, id ultrices lectus pharetra. Integer a elit a erat cursus mattis. Cras ullamcorper risus eros, ac gravida lorem accumsan eu. Sed quis nisl lacinia, euismod massa ut, faucibus est. Suspendisse non suscipit eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi porttitor vel purus eu viverra. Nunc pharetra orci ac quam maximus semper. Quisque mattis egestas diam ac tempus.
+        </p>
+        <p>
+          Quisque interdum ex massa, ac aliquet nisi tempor vel. Nam vitae sem eget libero aliquam cursus. Vivamus semper, odio ac faucibus sollicitudin, dolor odio ultricies mi, nec hendrerit arcu dui at ligula. Proin facilisis nec nunc a ultricies. Donec eros risus, cursus nec sollicitudin sit amet, hendrerit in dui. Aenean semper sed tellus sed iaculis. Duis ac porta ante, quis pharetra leo. 
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor augue et velit tempus hendrerit. Cras non urna tincidunt, tincidunt nibh eu, mattis orci. Aenean sed ultricies urna. Morbi non sollicitudin arcu, in facilisis libero. Ut sit amet rutrum sapien. Phasellus tincidunt lectus tellus, sed fringilla odio bibendum ac. Donec porta odio eu augue efficitur, id efficitur nibh varius. Pellentesque ex risus, varius eget vehicula a, rutrum non ipsum. Nullam iaculis ante ac felis fringilla, nec efficitur massa convallis. Fusce ac turpis a nisl facilisis varius. Sed pretium ante at varius lacinia. Sed nulla dolor, pellentesque non consectetur a, scelerisque in augue. Etiam semper lacinia tellus, eget venenatis turpis accumsan nec. Maecenas iaculis id velit sed ullamcorper.
+        </p>
+        <p>
+          Curabitur quis erat quis sapien finibus accumsan sit amet ut turpis. Cras vulputate sapien sit amet mattis pharetra. Nulla gravida pulvinar semper. Nulla erat magna, vehicula ac diam sit amet, mattis elementum ex. Mauris eu laoreet nunc. Maecenas tempor volutpat lorem et congue. Duis ultrices efficitur justo, eget volutpat est.
+        </p>
+        <p>
+          Sed interdum est porta justo euismod ultricies. Praesent at nulla accumsan, mollis mauris sed, eleifend mauris. Nulla id quam commodo, egestas dui non, maximus augue. Nulla ultricies consequat scelerisque. Vivamus semper sed erat et congue. Maecenas tempus enim vel venenatis blandit. Morbi at consectetur tellus. Integer posuere auctor sem, non lacinia turpis ullamcorper sit amet. Fusce faucibus felis vel ante rhoncus, at ornare mauris consectetur. Fusce dignissim lorem ac mauris rutrum viverra.
+        </p>
+        <p>
+          Nullam aliquam nisi a auctor lacinia. Etiam auctor, elit a bibendum feugiat, ante eros tincidunt ligula, quis rhoncus quam metus non purus. Nunc lacinia ut nisi nec porttitor. Quisque a neque ut dui auctor vehicula. Integer interdum nisl quis eros cursus, id ultrices lectus pharetra. Integer a elit a erat cursus mattis. Cras ullamcorper risus eros, ac gravida lorem accumsan eu. Sed quis nisl lacinia, euismod massa ut, faucibus est. Suspendisse non suscipit eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi porttitor vel purus eu viverra. Nunc pharetra orci ac quam maximus semper. Quisque mattis egestas diam ac tempus.
+        </p>
+        <p>
+          Quisque interdum ex massa, ac aliquet nisi tempor vel. Nam vitae sem eget libero aliquam cursus. Vivamus semper, odio ac faucibus sollicitudin, dolor odio ultricies mi, nec hendrerit arcu dui at ligula. Proin facilisis nec nunc a ultricies. Donec eros risus, cursus nec sollicitudin sit amet, hendrerit in dui. Aenean semper sed tellus sed iaculis. Duis ac porta ante, quis pharetra leo. 
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor augue et velit tempus hendrerit. Cras non urna tincidunt, tincidunt nibh eu, mattis orci. Aenean sed ultricies urna. Morbi non sollicitudin arcu, in facilisis libero. Ut sit amet rutrum sapien. Phasellus tincidunt lectus tellus, sed fringilla odio bibendum ac. Donec porta odio eu augue efficitur, id efficitur nibh varius. Pellentesque ex risus, varius eget vehicula a, rutrum non ipsum. Nullam iaculis ante ac felis fringilla, nec efficitur massa convallis. Fusce ac turpis a nisl facilisis varius. Sed pretium ante at varius lacinia. Sed nulla dolor, pellentesque non consectetur a, scelerisque in augue. Etiam semper lacinia tellus, eget venenatis turpis accumsan nec. Maecenas iaculis id velit sed ullamcorper.
+        </p>
+        <p>
+          Curabitur quis erat quis sapien finibus accumsan sit amet ut turpis. Cras vulputate sapien sit amet mattis pharetra. Nulla gravida pulvinar semper. Nulla erat magna, vehicula ac diam sit amet, mattis elementum ex. Mauris eu laoreet nunc. Maecenas tempor volutpat lorem et congue. Duis ultrices efficitur justo, eget volutpat est.
+        </p>
+        <p>
+          Sed interdum est porta justo euismod ultricies. Praesent at nulla accumsan, mollis mauris sed, eleifend mauris. Nulla id quam commodo, egestas dui non, maximus augue. Nulla ultricies consequat scelerisque. Vivamus semper sed erat et congue. Maecenas tempus enim vel venenatis blandit. Morbi at consectetur tellus. Integer posuere auctor sem, non lacinia turpis ullamcorper sit amet. Fusce faucibus felis vel ante rhoncus, at ornare mauris consectetur. Fusce dignissim lorem ac mauris rutrum viverra.
+        </p>
+        <p>
+          Nullam aliquam nisi a auctor lacinia. Etiam auctor, elit a bibendum feugiat, ante eros tincidunt ligula, quis rhoncus quam metus non purus. Nunc lacinia ut nisi nec porttitor. Quisque a neque ut dui auctor vehicula. Integer interdum nisl quis eros cursus, id ultrices lectus pharetra. Integer a elit a erat cursus mattis. Cras ullamcorper risus eros, ac gravida lorem accumsan eu. Sed quis nisl lacinia, euismod massa ut, faucibus est. Suspendisse non suscipit eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi porttitor vel purus eu viverra. Nunc pharetra orci ac quam maximus semper. Quisque mattis egestas diam ac tempus.
+        </p>
+        <p>
+          Quisque interdum ex massa, ac aliquet nisi tempor vel. Nam vitae sem eget libero aliquam cursus. Vivamus semper, odio ac faucibus sollicitudin, dolor odio ultricies mi, nec hendrerit arcu dui at ligula. Proin facilisis nec nunc a ultricies. Donec eros risus, cursus nec sollicitudin sit amet, hendrerit in dui. Aenean semper sed tellus sed iaculis. Duis ac porta ante, quis pharetra leo. 
+        </p>
+      </aside>
+
+      <hr>
+
+      <h2 id="generique">Balises Génériques</h2>
+      <aside>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor augue et velit tempus hendrerit. Cras non urna tincidunt, tincidunt nibh eu, mattis orci. Aenean sed ultricies urna. Morbi non sollicitudin arcu, in facilisis libero. Ut sit amet rutrum sapien. Phasellus tincidunt lectus tellus, sed fringilla odio bibendum ac. Donec porta odio eu augue efficitur, id efficitur nibh varius. Pellentesque ex risus, varius eget vehicula a, rutrum non ipsum. Nullam iaculis ante ac felis fringilla, nec efficitur massa convallis. Fusce ac turpis a nisl facilisis varius. Sed pretium ante at varius lacinia. Sed nulla dolor, pellentesque non consectetur a, scelerisque in augue. Etiam semper lacinia tellus, eget venenatis turpis accumsan nec. Maecenas iaculis id velit sed ullamcorper.
+        </p>
+        <p>
+          Curabitur quis erat quis sapien finibus accumsan sit amet ut turpis. Cras vulputate sapien sit amet mattis pharetra. Nulla gravida pulvinar semper. Nulla erat magna, vehicula ac diam sit amet, mattis elementum ex. Mauris eu laoreet nunc. Maecenas tempor volutpat lorem et congue. Duis ultrices efficitur justo, eget volutpat est.
+        </p>
+        <p>
+          Sed interdum est porta justo euismod ultricies. Praesent at nulla accumsan, mollis mauris sed, eleifend mauris. Nulla id quam commodo, egestas dui non, maximus augue. Nulla ultricies consequat scelerisque. Vivamus semper sed erat et congue. Maecenas tempus enim vel venenatis blandit. Morbi at consectetur tellus. Integer posuere auctor sem, non lacinia turpis ullamcorper sit amet. Fusce faucibus felis vel ante rhoncus, at ornare mauris consectetur. Fusce dignissim lorem ac mauris rutrum viverra.
+        </p>
+        <p>
+          Nullam aliquam nisi a auctor lacinia. Etiam auctor, elit a bibendum feugiat, ante eros tincidunt ligula, quis rhoncus quam metus non purus. Nunc lacinia ut nisi nec porttitor. Quisque a neque ut dui auctor vehicula. Integer interdum nisl quis eros cursus, id ultrices lectus pharetra. Integer a elit a erat cursus mattis. Cras ullamcorper risus eros, ac gravida lorem accumsan eu. Sed quis nisl lacinia, euismod massa ut, faucibus est. Suspendisse non suscipit eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi porttitor vel purus eu viverra. Nunc pharetra orci ac quam maximus semper. Quisque mattis egestas diam ac tempus.
+        </p>
+        <p>
+          Quisque interdum ex massa, ac aliquet nisi tempor vel. Nam vitae sem eget libero aliquam cursus. Vivamus semper, odio ac faucibus sollicitudin, dolor odio ultricies mi, nec hendrerit arcu dui at ligula. Proin facilisis nec nunc a ultricies. Donec eros risus, cursus nec sollicitudin sit amet, hendrerit in dui. Aenean semper sed tellus sed iaculis. Duis ac porta ante, quis pharetra leo. 
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor augue et velit tempus hendrerit. Cras non urna tincidunt, tincidunt nibh eu, mattis orci. Aenean sed ultricies urna. Morbi non sollicitudin arcu, in facilisis libero. Ut sit amet rutrum sapien. Phasellus tincidunt lectus tellus, sed fringilla odio bibendum ac. Donec porta odio eu augue efficitur, id efficitur nibh varius. Pellentesque ex risus, varius eget vehicula a, rutrum non ipsum. Nullam iaculis ante ac felis fringilla, nec efficitur massa convallis. Fusce ac turpis a nisl facilisis varius. Sed pretium ante at varius lacinia. Sed nulla dolor, pellentesque non consectetur a, scelerisque in augue. Etiam semper lacinia tellus, eget venenatis turpis accumsan nec. Maecenas iaculis id velit sed ullamcorper.
+        </p>
+        <p>
+          Curabitur quis erat quis sapien finibus accumsan sit amet ut turpis. Cras vulputate sapien sit amet mattis pharetra. Nulla gravida pulvinar semper. Nulla erat magna, vehicula ac diam sit amet, mattis elementum ex. Mauris eu laoreet nunc. Maecenas tempor volutpat lorem et congue. Duis ultrices efficitur justo, eget volutpat est.
+        </p>
+        <p>
+          Sed interdum est porta justo euismod ultricies. Praesent at nulla accumsan, mollis mauris sed, eleifend mauris. Nulla id quam commodo, egestas dui non, maximus augue. Nulla ultricies consequat scelerisque. Vivamus semper sed erat et congue. Maecenas tempus enim vel venenatis blandit. Morbi at consectetur tellus. Integer posuere auctor sem, non lacinia turpis ullamcorper sit amet. Fusce faucibus felis vel ante rhoncus, at ornare mauris consectetur. Fusce dignissim lorem ac mauris rutrum viverra.
+        </p>
+        <p>
+          Nullam aliquam nisi a auctor lacinia. Etiam auctor, elit a bibendum feugiat, ante eros tincidunt ligula, quis rhoncus quam metus non purus. Nunc lacinia ut nisi nec porttitor. Quisque a neque ut dui auctor vehicula. Integer interdum nisl quis eros cursus, id ultrices lectus pharetra. Integer a elit a erat cursus mattis. Cras ullamcorper risus eros, ac gravida lorem accumsan eu. Sed quis nisl lacinia, euismod massa ut, faucibus est. Suspendisse non suscipit eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi porttitor vel purus eu viverra. Nunc pharetra orci ac quam maximus semper. Quisque mattis egestas diam ac tempus.
+        </p>
+        <p>
+          Quisque interdum ex massa, ac aliquet nisi tempor vel. Nam vitae sem eget libero aliquam cursus. Vivamus semper, odio ac faucibus sollicitudin, dolor odio ultricies mi, nec hendrerit arcu dui at ligula. Proin facilisis nec nunc a ultricies. Donec eros risus, cursus nec sollicitudin sit amet, hendrerit in dui. Aenean semper sed tellus sed iaculis. Duis ac porta ante, quis pharetra leo. 
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor augue et velit tempus hendrerit. Cras non urna tincidunt, tincidunt nibh eu, mattis orci. Aenean sed ultricies urna. Morbi non sollicitudin arcu, in facilisis libero. Ut sit amet rutrum sapien. Phasellus tincidunt lectus tellus, sed fringilla odio bibendum ac. Donec porta odio eu augue efficitur, id efficitur nibh varius. Pellentesque ex risus, varius eget vehicula a, rutrum non ipsum. Nullam iaculis ante ac felis fringilla, nec efficitur massa convallis. Fusce ac turpis a nisl facilisis varius. Sed pretium ante at varius lacinia. Sed nulla dolor, pellentesque non consectetur a, scelerisque in augue. Etiam semper lacinia tellus, eget venenatis turpis accumsan nec. Maecenas iaculis id velit sed ullamcorper.
+        </p>
+        <p>
+          Curabitur quis erat quis sapien finibus accumsan sit amet ut turpis. Cras vulputate sapien sit amet mattis pharetra. Nulla gravida pulvinar semper. Nulla erat magna, vehicula ac diam sit amet, mattis elementum ex. Mauris eu laoreet nunc. Maecenas tempor volutpat lorem et congue. Duis ultrices efficitur justo, eget volutpat est.
+        </p>
+        <p>
+          Sed interdum est porta justo euismod ultricies. Praesent at nulla accumsan, mollis mauris sed, eleifend mauris. Nulla id quam commodo, egestas dui non, maximus augue. Nulla ultricies consequat scelerisque. Vivamus semper sed erat et congue. Maecenas tempus enim vel venenatis blandit. Morbi at consectetur tellus. Integer posuere auctor sem, non lacinia turpis ullamcorper sit amet. Fusce faucibus felis vel ante rhoncus, at ornare mauris consectetur. Fusce dignissim lorem ac mauris rutrum viverra.
+        </p>
+        <p>
+          Nullam aliquam nisi a auctor lacinia. Etiam auctor, elit a bibendum feugiat, ante eros tincidunt ligula, quis rhoncus quam metus non purus. Nunc lacinia ut nisi nec porttitor. Quisque a neque ut dui auctor vehicula. Integer interdum nisl quis eros cursus, id ultrices lectus pharetra. Integer a elit a erat cursus mattis. Cras ullamcorper risus eros, ac gravida lorem accumsan eu. Sed quis nisl lacinia, euismod massa ut, faucibus est. Suspendisse non suscipit eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi porttitor vel purus eu viverra. Nunc pharetra orci ac quam maximus semper. Quisque mattis egestas diam ac tempus.
+        </p>
+        <p>
+          Quisque interdum ex massa, ac aliquet nisi tempor vel. Nam vitae sem eget libero aliquam cursus. Vivamus semper, odio ac faucibus sollicitudin, dolor odio ultricies mi, nec hendrerit arcu dui at ligula. Proin facilisis nec nunc a ultricies. Donec eros risus, cursus nec sollicitudin sit amet, hendrerit in dui. Aenean semper sed tellus sed iaculis. Duis ac porta ante, quis pharetra leo. 
+        </p>
+      </aside>
+
+      <img alt="relative" src="./img/img.jpg">
+      <img alt="deformee" src="./img/img.jpg" style="height:100px;width:20px">
+      <img alt="absolue"  src="https://img.lemde.fr/2019/04/22/0/191/1619/1079/688/0/60/0/e39da8d_2FIads9h8wB-0SwSgxVaVWsp.jpg">
+    </main>
+
+    <!-- footer: autant que voulu -->
+    <footer id="footer">
+      <p>
+        footer_blahblah
+      </p>
+    </footer>
+
   </body>
+
+
+
 </html>
-
-
-
